@@ -1,0 +1,21 @@
+html 
+    head 
+        link(href= '/styles.css', rel= 'stylesheet')
+    body 
+        h1= showdata.title
+        h2= `Season ${ foundSeason.number }`
+        table  
+            tr 
+                th No.
+                th Title 
+                th Director
+            for episode in foundSeason.episodes 
+                tr 
+                    td(class="number")= episode.number 
+                    td(class="title")= episode.title 
+                    td(class="director")= episode.director
+                tr 
+                    td(colspan=3)= episode.synopsis
+
+        
+            
